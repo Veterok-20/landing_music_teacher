@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+    /* height: 100%; */
+    margin: 0;
+    /* удаление вертикальных margin между элементами, кот. ставаит браузер*/
+    padding: 0;
+    /* в 6 IE min высотой дива 20px*/
+    font-size: 100.01%;
+    /* background-color: rgb(250, 245, 224); */
+    --fsize: 16px; /*базовый размер шрифта*/
+}
+
+section1>.conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 92vh;
+    margin-top: 68px;
+    /*  ???  */
+    overflow: hidden;
+    background-color: rgb(250, 245, 224);
+    /* background-attachment: fixed; */
+}
+
+section2>.fone {
+    height: 200vh;
+    width: 100vw;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(250, 245, 224, 0.8)),
+        url("Images/nebo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-position: top;      */
+    background-attachment: fixed;
+}
+
+.section4 > div.picture3 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("Images/781.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: top;      */
+    /* background-attachment: fixed; */
+}
+
+@font-face {
+    font-family: MarckScript-Regular;
+    src: url(Marck_Script/MarckScript-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+@keyframes textmove {
+    from {
+        opacity: 0;
+        transform: translateY(150%);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.navpannel {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 90vh;
+    background-color: rgb(250, 245, 224);
+    height: 8vh;
+}
+
+ul.nav {
+    margin-top: 5px;
+    margin-left: 10px;
+    padding-left: 0px;
+    list-style: none;
+    background-color: #f4f4f4;
+}
+
+ul.nav li {
+    float: left;
+}
+
+ul.nav a {
+    display: block;
+    width: 5em;
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #f4f4f4;
+    /* border: 1px dashed #333; */
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+
+ul.nav a:hover {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.logo {
+    display: block;
+    width: 548px;
+    height: 223px;
+}
+
+section1 > div > p.text {
+    animation-duration: 5s;
+    animation-name: textmove;
+    text-align: center;
+    font-family: MarckScript-Regular;
+    font-size: 40px;
+    color: green;
+    display: block;
+    flex: 0 1 auto;
+    max-height: 100px;
+    min-height: 0;
+}
+
+.picture1 {
+    min-width: 400px;
+    min-height: 0px;
+    max-width: 1600px;
+    max-height: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    flex: 0 3 auto;
+    margin-top: 20px;
+}
+
+section2> .fone > .text1 p.head1 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(153, 50, 204);
+}
+
+/* section2 > .fone {
+    height: 200vh;  
+} */
+
+section2 > .fone > .text1 {
+    padding-left: 10vw;
+    display: block;
+    max-width: 80vw;
+    min-width: 0;
+    max-height: 150vh;
+    min-height: 0;
+    font-size: 20px;
+    font-weight: 550;
+    /*насыщенность цвета текста*/
+    font-family: 'Courier New', Courier, monospace;
+    /* color: rgb(75, 0, 130); */
+    font-style: oblique;
+    color: rgb(128, 0, 128);
+    text-indent: 1.5em;
+    /*отступ - красная строка абзаца*/
+}
+
+section2 > .fone > .text1 > p {
+    margin-top: .5em;  /*рассояние между строками*/
+}
+
+blockquote p {
+    color: rgb(153, 50, 204);
+    font-style: italic;
+    margin-top: .5em;
+}
+
+section2 > .fone > .text2 {
+    padding-top: 40px;
+    padding-left: 10vw;
+    display: block;
+    max-width: 80vw;
+    min-width: 0;
+    max-height: 100vh;
+    min-height: 0;
+    font-size: 30px;
+    font-weight: 550;
+    font-family: 'Courier New', Courier, monospace;
+    /* color: rgb(75, 0, 130); */
+    font-style: oblique;
+    color: rgb(128, 0, 128);
+}
+
+section2 > .fone > .text2 > p.head2 {
+    text-align: center;
+    font-size: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(153, 50, 204);
+}
+
+section2 > .fone > .text2 > ul {
+    padding-top: 40px;
+    font-size: 30px;
+    text-align: center;
+    list-style-type: none;     
+}
+
+/* section2 > .fone > .text2 > ul:nth-child(2n+1)::after {
+    content: \273f \2740 \273f;  
+} */
+
+.slider-container {
+    overflow-x: hidden;
+    position: relative;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.slider {
+    /* overflow-x: hidden; */
+    touch-action: pan-x;
+    height: 100%;
+    /* width: 100%;    */
+    display: flex;
+    position: absolute;
+    top: 0px;
+    /* left: calc((100% - var(--width-window)) / 2)vw; */
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    /* margin: auto; */
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .slider-container {
+        --width-window: 100vw;
+        width: var(--width-window);
+    }
+
+    .slider {
+        --slider-cols: 1;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .slider-container {
+        --width-window: 80vw;
+        width: var(--width-window);
+    }
+
+    .slider {
+        --slider-cols: 1;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .slider-container {
+        --width-window: 70vw;
+        width: var(--width-window);
+    }
+
+    .slider {
+        --slider-cols: 2;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .slider-container {
+        --width-window: 60vw;
+        width: var(--width-window);
+    }
+
+    .slider {
+        --slider-cols: 2;
+    }
+}
+
+@media (min-width: 1400px) {
+    .slider-container {
+        --width-window: 80vw;
+        width: var(--width-window);
+    }
+
+    .slider {
+        --slider-cols: 3;
+    }
+}
+
+.slider-el {
+    background-color: antiquewhite;
+}
+
+.slider-el {
+    flex-shrink: 0;
+    transition: opacity .5s;
+    --margin: 8px;
+    /* flex-basis: calc((var(--width-window) - var(--slider-cols) * var(--margin) * 2) / var(--slider-cols)); */
+    width: calc((var(--width-window) - var(--slider-cols) * var(--margin) * 2) / var(--slider-cols));
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 48px;
+    display: flex;
+    margin: 0 8px;
+}
+
+.slider-btn {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    margin: auto 10px;
+    font-size: 1.5rem;
+    color: black;
+    background-color: rgb(233, 248, 23);
+    opacity: 0.3;
+    cursor: pointer;
+    outline: none;
+    transition: opacity .3s;
+    border: 1px solid black;
+}
+
+.slider-btn:hover {
+    opacity: 0.6;
+}
+
+.slider-btn-left {
+    left: 1.5rem;
+}
+
+.slider-btn-right {
+    right: 1.5rem;
+}
+
+.slider-img {
+    object-fit: cover;
+}
+
+.section3 .section4 {
+    height: 100vh;
+    width: 100vw;
+    display: block;
+}
+
+.section3 > div.text3 {
+    text-align: left;
+    font-size: 23px;
+    padding-top: 30px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    font-weight: 550;
+    color: rgb(153, 50, 204);
+    text-indent: 1.5em;
+}
+
+.section3 > div.text3 > p {
+    margin-top: .5em;
+}
+
+section4 > div > .citate {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    height: 20vh;
+    width: 50vw;
+    padding: 10px;
+    font-family: MarckScript-Regular;
+    font-size: 40px;
+    color: rgb(139, 0, 139);
+    /* color: rgb(199, 21, 133); */
+    /* color: rgb(255, 0, 0); */
+    font-weight: 600;
+    /* background-color: aliceblue;     */
+    /* background-color: rgba(255, 228, 196, 0);  */
+    background-color: rgba(0, 0, 0, 0.1); 
+}
+
+section4 > div > .telef {
+    animation-duration: 5s;
+    animation-name: textmove;
+    position: absolute;
+    height: 20vh;
+    width: 50vw;
+    padding: 20px;
+    top: 60vh;
+    left: calc(100vw/2 - 50vw/2);
+    font-size: calc(var(--fsize) + 1vw);
+    text-align: center;   
+    background-color: rgb(250, 245, 224);
+}
