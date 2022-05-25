@@ -138,3 +138,26 @@ function initSlider(slider, mediaBreakpoints = []) {
         }
     }
 }
+
+let appended = false;
+let section4 = document.querySelector('section4');
+let lastpage = document.querySelector("#lastpage");
+let divtelef = document.createElement("div");
+divtelef.className = 'telef';
+divtelef.innerHTML = '<p style="color: rgb(34, 139, 34);">Связаться со мной можно по телефону:</p>' +
+'<p style="margin-top: 1.5em; color: rgb(199, 21, 133);">+7 (XXX) XXX XX-XX</p>';
+   window.onscroll = function() {   
+    if (window.pageYOffset > 4*document.documentElement.clientHeight) {
+     if (!appended) {
+      lastpage.appendChild(divtelef);
+      appended = true;
+     }
+    } else {
+     if (appended) {
+      lastpage.removeChild(divtelef);
+      appended = false;
+     } 
+    }
+   }
+section4.appendChild(lastpage);   
+ 
