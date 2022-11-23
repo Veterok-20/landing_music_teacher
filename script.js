@@ -54,7 +54,7 @@ function initSlider(slider, mediaBreakpoints = []) {
         /**
          * @param {TouchEvent} event 
          */
-        function touchMove(event) {
+        function touchMove(event) { 
             touchCurX = event.touches[0].clientX
         }
 
@@ -77,7 +77,7 @@ function initSlider(slider, mediaBreakpoints = []) {
             if (stepCounter < sliderLength + 1) {
                 stepCounter++;
                 transform(true)
-            }
+            } 
             if (stepCounter == sliderLength + 1) {
                 setTimeout(() => {
                     stepCounter = 1
@@ -111,6 +111,7 @@ function initSlider(slider, mediaBreakpoints = []) {
             slider.insertAdjacentHTML('beforeend', tailEnd.join(''))
         }
 
+
         function initElemWidth() {
             const elem = slider.firstElementChild
             const elemML = getComputedStyle(elem).marginLeft;
@@ -125,7 +126,7 @@ function initSlider(slider, mediaBreakpoints = []) {
             const transform = `translateX(calc((-100% / ${sliderNum}) * ${stepCounter}))`
             slider.style.transform = transform
         }
-    }
+    }  
 
     mediaBreakpoints.forEach(mediaBreak => {
         const mql = window.matchMedia(mediaBreak);

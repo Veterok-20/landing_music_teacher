@@ -10,10 +10,13 @@
 
 @media (min-width: 576px) and (max-width: 767px) {
     .slider-container {
-        --width-window: 100vw;
-        --fsize: 12px;
+        --width-window: 100vw;        
         width: var(--width-window);
     }
+
+    section1 section2 section3 section4 {
+        --fsize: 12px;
+        }
 
     .slider {
         --slider-cols: 1;
@@ -22,9 +25,12 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
     .slider-container {
-        --width-window: 80vw;
-        --fsize: 14px;
+        --width-window: 80vw;        
         width: var(--width-window);
+    }
+
+    section1 section2 section3 section4 {
+    --fsize: 12px;
     }
 
     .slider {
@@ -35,9 +41,13 @@
 @media (min-width: 992px) and (max-width: 1199px) {
     .slider-container {
         --width-window: 70vw;
-        width: var(--width-window);
-        --fsize: 16px;
+        width: var(--width-window);       
     }
+
+    section1 section2 section3 section4 {
+        --fsize: 14px;
+    }
+
     .slider {
         --slider-cols: 2;
     }
@@ -45,9 +55,12 @@
 
 @media (min-width: 1200px) and (max-width: 1399px) {
     .slider-container {
-        --width-window: 60vw;
-        --fsize: 16px;
+        --width-window: 60vw;       
         width: var(--width-window);
+    }
+
+    section1 section2 section3 section4 {
+        --fsize: 16px;
     }
 
     .slider {
@@ -57,9 +70,12 @@
 
 @media (min-width: 1400px) {
     .slider-container {
-        --width-window: 80vw;
-        --fsize: 18px;
+        --width-window: 80vw;        
         width: var(--width-window);
+    }
+
+    section1 section2 section3 section4 {
+        --fsize: 18px;
     }
 
     .slider {
